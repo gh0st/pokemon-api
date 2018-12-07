@@ -13,5 +13,12 @@ export class Pokemons {
         let id = req.params.id;
         res.status(200).send(pokemons[id]);
       });
+
+    app.route('/pokemons')
+      .post((req: Request, res: Response) => {
+        let name = req.body.name;
+        let attack = req.body.attac;
+        // logic to store in database/json
+      });
   }
 }
